@@ -9,7 +9,7 @@ Type in the location code provided in your laundry room. It likely follows the g
 From here, it should list all laundry rooms found at your location. Choose the one you use and from there the machines statuses should be visible.
 
 ## Self hosting
-The folks over there might not enjoy me hosting this, so self hosting is probably the way to go for a long term solution. **USE AT YOUR OWN RISK!**. Self hosting requires signing up for an account and agreeing to their TOS which forbids using an account for purposes such as these.
+The folks over there might not enjoy me hosting this, so self hosting is probably the way to go for a long term solution. **USE AT YOUR OWN RISK!** Self hosting requires signing up for an account and agreeing to their TOS which forbids using an account for purposes such as these.
 ### Configuration
 Simply update `config-example.json` with your desired port, and login credentials. Then rename the file to `config.json`. That's it!
 ### Running it.
