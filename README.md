@@ -1,9 +1,9 @@
 # Campus Laundry Tracker
-This is a pet project of mine, I've been fed up with wash's campuscleanpay app, so I cooked up a little web version. A live demo is available at [campuslaundry.live](campuslaundry.live). 
+This is a pet project of mine, I've been fed up with wash's campuscleanpay app, so I cooked up a little web version. A live demo is available at [campuslaundry.live](https://www.campuslaundry.live). 
 
 ## Usage
 ### Accessing the site
-simply visit your frontend of choice whether that be my [live demo](campuslaundry.live), or your self hosted version, likely found at [http://localhost:3000](http://localhost:3000). There is no login page.
+simply visit your frontend of choice whether that be my [live demo](https://www.campuslaundry.live), or your self hosted version, likely found at [http://localhost:3000](http://localhost:3000). There is no login page.
 ### Finding your room
 Type in the location code provided in your laundry room. It likely follows the general format of `W######` (where '#' represents a number). Then click `Set Location & View Rooms`.
 From here, it should list all laundry rooms found at your location. Choose the one you use and from there the machines statuses should be visible.
