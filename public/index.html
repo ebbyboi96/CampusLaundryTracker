@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laundry Room Status</title>
+    <link rel="stylesheet" href="/style.css">
+    <script id="initial-room-data" type="application/json"></script>
+</head>
+<body>
+<header>
+    <h1>Laundry Room Status</h1>
+    <div id="location-info">
+        SR Code: <span id="current-sr-code-display">Not Set</span>
+        <button id="change-location-btn">Change Location</button>
+    </div>
+</header>
+
+<main>
+    <section id="sr-code-setup" style="display: none;">
+        <h2>Enter Location Code</h2>
+        <input type="text" id="sr-code-input" placeholder="_______" maxlength="7" pattern="[A-Za-z0-9]{7}">
+        <button id="submit-sr-code-btn">Set Location & View Rooms</button>
+        <p id="sr-code-error" class="error-message" style="display: none;"></p>
+    </section>
+
+    <section id="room-selection" style="display: none;">
+        <h2>Select a Laundry Room
+            <button id="toggle-rooms-btn" style="display: none;">Hide Room List</button>
+        </h2>
+        <ul id="room-list">
+        </ul>
+    </section>
+
+    <section id="machine-status-section" style="display: none;">
+        <h2 id="current-room-name">Status for: Room Name</h2>
+        <div id="status-container">
+            <div class="machine-group">
+                <h3>Washers</h3>
+                <ul id="washers-list">
+                </ul>
+            </div>
+            <div class="machine-group">
+                <h3>Dryers</h3>
+                <ul id="dryers-list">
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="/app.js"></script>
+</body>
+</html>

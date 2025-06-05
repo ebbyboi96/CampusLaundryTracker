@@ -1,0 +1,196 @@
+body { font-family: sans-serif; margin: 0; background-color: #f4f4f4; color: #333; }
+header { background-color: #004c3f; color: white; padding: 1em; text-align: center; }
+main { padding: 1em; max-width: 900px; margin: auto; }
+#room-selection ul { list-style: none; padding: 0; }
+#room-selection li { background-color: white; border: 1px solid #ddd; margin-bottom: 0.5em; padding: 0.8em; cursor: pointer; border-radius: 4px; }
+#room-selection li:hover { background-color: #e9e9e9; }
+.loading { font-style: italic; color: #777; }
+#machine-status-section { margin-top: 2em; }
+#status-container { display: flex; justify-content: space-around; }
+.machine-group { background-color: white; padding: 1em; border-radius: 4px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 45%; }
+.machine-group ul { list-style: none; padding: 0; }
+.machine-group li { border-bottom: 1px solid #eee; padding: 0.5em 0; }
+.machine-group li:last-child { border-bottom: none; }
+.machine-name { font-weight: bold; }
+.status-available { color: green; }
+.status-in-use { color: orange; }
+.status-out-of-order { color: red; }
+.status-ending { color: #FF8C00; }
+.status-starting { color: #5bc0de; }
+#location-info {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #e0e0e0;
+}
+
+#current-sr-code-display {
+    font-weight: bold;
+    color: #fff;
+}
+
+#change-location-btn {
+    background-color: #f0ad4e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+#change-location-btn:hover {
+    background-color: #ec971f;
+}
+
+
+#sr-code-setup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#sr-code-setup h2 {
+    margin-top: 0;
+}
+
+#sr-code-input {
+    padding: 10px;
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 200px;
+    text-align: center;
+    letter-spacing: 0.5em;
+    font-family: monospace;
+}
+
+#submit-sr-code-btn {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+#submit-sr-code-btn:hover {
+    background-color: #4cae4c;
+}
+
+#submit-sr-code-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+#toggle-rooms-btn {
+    background-color: #337ab7;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+#toggle-rooms-btn:hover {
+    background-color: #286090;
+}
+
+.notify-btn {
+    margin-left: 10px;
+    padding: 3px 8px;
+    font-size: 0.8em;
+    cursor: pointer;
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+.notify-btn:hover {
+    background-color: #31b0d5;
+}
+.notify-btn.watching {
+    background-color: #d9534f;
+}
+.notify-btn.watching:hover {
+    background-color: #c9302c;
+}
+
+.machine-name-text {
+    font-weight: bold;
+}
+
+.machine-status-text {}
+.machine-status-text.status-available { color: green; }
+.machine-status-text.status-in-use { color: orange; }
+.machine-status-text.status-out-of-order { color: red; }
+.machine-status-text.status-ending { color: #FF8C00; }
+.machine-time-text {}
+
+.more-info-btn {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 2px 6px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.75em;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.more-info-btn:hover {
+    background-color: #5a6268;
+}
+
+#machine-details-modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1050;
+    max-height: 80vh;
+    overflow-y: auto;
+    min-width: 300px;
+    max-width: 90vw;
+}
+
+#machine-details-modal pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+#machine-details-modal button.close-modal-btn {
+    display: block;
+    margin: 15px auto 0;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+#machine-details-modal button.close-modal-btn:hover {
+    background-color: #0056b3;
+}
